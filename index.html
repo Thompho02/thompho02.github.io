@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thompho Mudau | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --primary: #1e88e5;
+      --secondary: #0d47a1;
+      --card-bg: #1e1e1e;
+      --accent: #64b5f6;
+      --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 0.3rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.4rem;
+      font-size: 1.6rem;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+    }
+
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      padding: 0;
+    }
+
+    .skills-list li {
+      background: var(--card-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      gap: 1rem;
+    }
+
+    form input, form textarea {
+      background: #2c2c2c;
+      border: 1px solid var(--primary);
+      color: white;
+      padding: 0.6rem;
+      border-radius: 6px;
+    }
+
+    form button {
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Thompho Mudau</h1>
+    <p>IT Graduate | Software (Front-End) Developer</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <img src="pictures/profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <div>
+        <h2>About Me</h2>
+        <p>
+          Passionate IT graduate specialized in software development. Skilled in building clean,
+          responsive web apps & graphic designs with modern frontend technologies and Python backend basics.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML5 & CSS3</li>
+        <li>React (Basics)</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="https://raw.githubusercontent.com/thompho02/taskzen/main/screenshot.png"
+            alt="TaskZen App Screenshot"
+            class="project-image"
+          />
+          <div class="project-content">
+            <h3>TaskZen - Task Planner App</h3>
+            <p>
+              A clean, responsive task planner app built with vanilla HTML, CSS, and JavaScript,
+              featuring localStorage persistence.
+            </p>
+            <a href="https://thompho02.github.io/taskzen/" target="_blank">View Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:thomphomulaudzi1622@gmail.com">thomphomulaudzi1622@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/thompho02" target="_blank">github.com/thompho02</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/thompho-mudau-3356921b0/" target="_blank">linkedin.com/in/thompho-mudau</a></p>
+
+      <form id="contactForm" novalidate>
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p class="success-message" id="successMessage" style="display: none;">
+          Thanks for reaching out! I'll get back to you soon.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Thompho Mudau — Front-End Developer. All rights reserved.
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      successMessage.style.display = 'block';
+      form.reset();
+
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thompho Mudau | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --primary: #1e88e5;
+      --secondary: #0d47a1;
+      --card-bg: #1e1e1e;
+      --accent: #64b5f6;
+      --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-style: italic;
+      margin-top: 0.3rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.4rem;
+      font-size: 1.6rem;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+    }
+
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      padding: 0;
+    }
+
+    .skills-list li {
+      background: var(--card-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      gap: 1rem;
+    }
+
+    form input, form textarea {
+      background: #2c2c2c;
+      border: 1px solid var(--primary);
+      color: white;
+      padding: 0.6rem;
+      border-radius: 6px;
+    }
+
+    form button {
+      background: var(--primary);
+      color: white;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Thompho Mudau</h1>
+    <p>IT Graduate | Software (Front-End) Developer</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <img src="pictures/profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <div>
+        <h2>About Me</h2>
+        <p>
+          Passionate IT graduate specialized in software development. Skilled in building clean,
+          responsive web apps & graphic designs with modern frontend technologies and Python backend basics.
+        </p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML5 & CSS3</li>
+        <li>React (Basics)</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img
+            src="https://raw.githubusercontent.com/thompho02/taskzen/main/screenshot.png"
+            alt="TaskZen App Screenshot"
+            class="project-image"
+          />
+          <div class="project-content">
+            <h3>TaskZen - Task Planner App</h3>
+            <p>
+              A clean, responsive task planner app built with vanilla HTML, CSS, and JavaScript,
+              featuring localStorage persistence.
+            </p>
+            <a href="https://thompho02.github.io/taskzen/" target="_blank">View Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:thomphomulaudzi1622@gmail.com">thomphomulaudzi1622@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/thompho02" target="_blank">github.com/thompho02</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/thompho-mudau-3356921b0/" target="_blank">linkedin.com/in/thompho-mudau</a></p>
+
+      <form id="contactForm" novalidate>
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+
+        <label for="message">Message*</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+        <p class="success-message" id="successMessage" style="display: none;">
+          Thanks for reaching out! I'll get back to you soon.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Thompho Mudau — Front-End Developer. All rights reserved.
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      successMessage.style.display = 'block';
+      form.reset();
+
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>
