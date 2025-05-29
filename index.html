@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thompho Mudau | Front-End Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .profile-pic {
+      max-width: 150px;
+      border-radius: 50%;
+      margin: 1rem auto;
+      display: block;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    .project-card {
+      background: #1f1f1f;
+      padding: 1rem;
+      border-radius: 0.75rem;
+    }
+    .project-image {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    form {
+      display: grid;
+      gap: 0.75rem;
+      max-width: 400px;
+      margin-top: 1rem;
+    }
+    input, textarea, button {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      border: none;
+    }
+    button {
+      background: #03dac5;
+      color: black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="pictures/profile.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Thompho Mudau</h1>
+    <p>IT Graduate | Software (Front-End) Developer</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Passionate IT graduate specialized in software development. Skilled in
+        building clean, responsive web apps & graphic designs with modern frontend
+        technologies and Python backend basics.
+      </p>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML5 & CSS3</li>
+        <li>React (Basics)</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="https://raw.githubusercontent.com/thompho02/taskzen/main/screenshot.png"
+               alt="TaskZen App Screenshot" class="project-image" />
+          <h3>TaskZen - Task Planner App</h3>
+          <p>A clean, responsive task planner app built with vanilla HTML, CSS,
+             and JavaScript, featuring localStorage persistence.</p>
+          <a href="https://thompho02.github.io/taskzen/" target="_blank">View Live Demo</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:thomphomulaudzi1622@gmail.com">thomphomulaudzi1622@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/thompho02" target="_blank">github.com/thompho02</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/thompho" target="_blank">linkedin.com/in/thompho</a></p>
+
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 Thompho Mudau. All rights reserved.</footer>
+</body>
+</html>
